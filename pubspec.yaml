@@ -1,7 +1,7 @@
 name: paymob_payment
 description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+version: 1.0.0
+homepage: https://github.com/dev-KarimAhmed/paymob_payment_package
 
 environment:
   sdk: ^3.5.3
