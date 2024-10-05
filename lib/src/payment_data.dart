@@ -1,8 +1,10 @@
 
-import 'package:paymob_payment/models/style.dart';
-import 'package:paymob_payment/models/user_data.dart';
 
- class PaymentData {
+
+ import 'package:pay_with_paymob/models/style.dart';
+import 'package:pay_with_paymob/models/user_data.dart';
+
+class PaymentData {
   static String _apiKey = "";
   static String _integrationCardId = "";
   static String _integrationMobileWalletId = "";
