@@ -14,7 +14,7 @@ and the Flutter guide for
 
 # pay_with_paymob
 
-A Flutter package that simplifies the integration of pay_with_paymob gateway for Visa and mobile wallet payments.
+A Flutter package that simplifies the integration of Paymob gateway for Visa and mobile wallet payments.
 
 ## Features
 
