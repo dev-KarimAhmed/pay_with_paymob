@@ -12,7 +12,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-# paymob_payment
+# pay_with_paymob
 
 A Flutter package that simplifies the integration of pay_with_paymob gateway for Visa and mobile wallet payments.
 
