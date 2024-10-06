@@ -37,7 +37,7 @@ Add the following line to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  paymob_payment: ^1.0.0  
+ pay_with_paymob : ^1.1.2  
 ```
 
 ## Usage
