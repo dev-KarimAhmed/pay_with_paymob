@@ -1,3 +1,2 @@
-## 0.0.1
-
-* TODO: Describe initial release.
+## [1.2.4] - 2024-11-19
+- Updated README.md with improved instructions.  

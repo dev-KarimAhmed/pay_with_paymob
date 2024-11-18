@@ -1,6 +1,6 @@
 name: pay_with_paymob
 description: "A Flutter package for integrating pay_with_paymob services, enabling Visa and mobile wallet payments with customizable UI and secure payment processing."
-version: 1.0.0
+version: 1.2.4
 homepage: https://github.com/dev-KarimAhmed/paymob_payment_package
 
 environment:

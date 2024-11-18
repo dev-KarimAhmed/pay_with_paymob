@@ -1,10 +1,11 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-import 'package:pay_with_paymob/paymob_payment.dart';
-import 'package:pay_with_paymob/services/dio_helper.dart';
-import 'package:pay_with_paymob/views/mobile_wallet_view.dart';
-import 'package:pay_with_paymob/views/visa_view.dart';
+import 'package:pay_with_paymob/pay_with_paymob.dart';
+import 'package:pay_with_paymob/src/services/dio_helper.dart';
+import 'package:pay_with_paymob/src/views/visa_view.dart';
+
+import 'mobile_wallet_view.dart';
 
 class PaymentView extends StatefulWidget {
   const PaymentView({

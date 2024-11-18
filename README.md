@@ -1,106 +1,114 @@
 
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# pay_with_paymob
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+**A Flutter package to simplify Paymob gateway integration for Visa and mobile wallet payments.**  
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+## Features  
 
-# paymob_payment
+- Easy integration with Paymob's payment system.  
+- Support for multiple payment methods: Visa and mobile wallets.  
+- Customizable payment view with flexible style options.  
+- User data collection for enhanced payment experiences.  
+- Callbacks for handling payment success and errors.  
 
-A Flutter package that simplifies the integration of pay_with_paymob gateway for Visa and mobile wallet payments.
+---
 
-## Features
+## Getting Started  
 
-- Easy integration with Paymob's payment system.
-- Support for multiple payment methods: Visa and mobile wallets.
-- Customizable payment view with style options.
-- User data collection for payments.
-- Callbacks for payment success and error handling.
+### Prerequisites  
 
-## Getting started
+1. Flutter SDK installed on your machine.  
+2. A Paymob account to acquire the API key and other necessary credentials.  
 
-### Prerequisites
+### Installation  
 
-- Flutter SDK installed on your machine.
-- A Paymob account to get your API key and other necessary credentials.
+Add the following line to your `pubspec.yaml` file:  
 
-### Installation
+```yaml  
+dependencies:  
+  pay_with_paymob: ^1.2.4
+```  
 
-Add the following line to your `pubspec.yaml` file:
+Run `flutter pub get` to install the package.  
 
-```yaml
-dependencies:
-  paymob_payment: ^1.0.0  
-```
+---
 
-## Usage
+## Usage  
 
-### Initializing Payment Data
+### Initializing Payment Data  
 
-Before using the payment functionality, initialize your payment data (preferably in the `main` function):
+Before proceeding with payment, initialize your payment data (in the `main` function or the `initState` of your widget):  
 
-```dart
+```dart  
 PaymentData.initialize(
-  apiKey: "Your Api key", // (Required) getting it from dashboard Select Settings -> Account Info -> API Key
-  iframeId: "", // (Required) getting it from paymob Select Developers -> iframes
-  integrationCardId: "", // (Required) getting it from dashboard Select Developers -> Payment Integrations -> Online Card ID
-  integrationMobileWalletId: "", // (Required) getting it from dashboard Select Developers -> Payment Integrations -> Mobile Wallet ID
-  
+  apiKey: "Your API Key", // Required: Obtain from dashboard -> Settings -> Account Info -> API Key
+  iframeId: "Your Iframe ID", // Required: Obtain from Developers -> iframes
+  integrationCardId: "Your Card Integration ID", // Required: Obtain from Developers -> Payment Integrations -> Online Card ID
+  integrationMobileWalletId: "Your Wallet Integration ID", // Required: Obtain from Developers -> Payment Integrations -> Mobile Wallet ID
+
   // Optional User Data
   userData: UserData(
-    email: "User Email", // (Optional) Email | Default: 'NA'
-    phone: "User Phone", // (Optional) Phone | Default: 'NA'
-    firstName: "User First Name", // (Optional) First Name | Default: 'NA'
-    lastName: "User Last Name", // (Optional) Last Name | Default: 'NA'
+    email: "User Email", // Optional: Default is 'NA'
+    phone: "User Phone", // Optional: Default is 'NA'
+    firstName: "User First Name", // Optional: Default is 'NA'
+    lastName: "User Last Name", // Optional: Default is 'NA'
   ),
   
-  // Optional Style
+  // Optional Style Customizations
   style: Style(
-    primaryColor: Colors.blue, // (Optional) Default: Colors.blue
-    scaffoldColor: Colors.white, // (Optional) Default: Colors.white
-    appBarBackgroundColor: Colors.blue, // (Optional) Default: Colors.blue
-    appBarForegroundColor: Colors.white, // (Optional) Default: Colors.white
-    textStyle: TextStyle(), // (Optional) Default: TextStyle()
-    buttonStyle: ElevatedButton.styleFrom(), // (Optional) Default: ElevatedButton.styleFrom(...)
-    circleProgressColor: Colors.blue, // (Optional) Default: Colors.blue
-    unselectedColor: Colors.grey, // (Optional) Default: Colors.grey
-    showMobileWalletIcons: true, // (Optional) Default: true
+    primaryColor: Colors.blue, // Default: Colors.blue
+    scaffoldColor: Colors.white, // Default: Colors.white
+    appBarBackgroundColor: Colors.blue, // Default: Colors.blue
+    appBarForegroundColor: Colors.white, // Default: Colors.white
+    textStyle: TextStyle(), // Default: TextStyle()
+    buttonStyle: ElevatedButton.styleFrom(), // Default: ElevatedButton.styleFrom()
+    circleProgressColor: Colors.blue, // Default: Colors.blue
+    unselectedColor: Colors.grey, // Default: Colors.grey
+    showMobileWalletIcons: true, // Default: true
   ),
 );
-```
+```  
 
-### Navigating to Payment View
+### Navigating to the Payment View  
 
-After initializing, navigate to the payment view as follows:
+Once initialized, navigate to the payment view using:  
 
-```dart
+```dart  
 Navigator.push(
   context,
-  MaterialPageRoute(builder: (context) => PaymentView(
-    onPaymentSuccess: () {
-      // Handle payment success
-    },
-    onPaymentError: () {
-      // Handle payment error
-    },
-    price: 100, // (Required) Total Price e.g. 100 => 100 LE
-  )),
+  MaterialPageRoute(
+    builder: (context) => PaymentView(
+      onPaymentSuccess: () {
+        // Handle successful payment
+      },
+      onPaymentError: () {
+        // Handle payment error
+      },
+      price: 100, // Required: Total price, e.g., 100 means 100 EGP
+    ),
+  ),
 );
-```
+```  
 
-## Additional information
+---
 
-For more details and support, please check the [documentation](https://github.com/dev-KarimAhmed/paymob_payment_package).
+## Additional Information  
 
-If you encounter any issues, feel free to open an issue on the GitHub repository. Contributions are welcome!
+### Test Data for Simulation  
 
-```
+**Visa Card:**  
+- **Card Number:** 5123456789012346  
+- **Card Holder Name:** Test Account  
+- **Expiry Date:** 12/25  
+- **CVV:** 123  
 
-تأكد من تحديث أي روابط أو معلومات تتعلق بالحزمة حسب الحاجة. إذا كان لديك أي تعديلات أو إضافات أخرى، لا تتردد في إخباري!
+**Mobile Wallet:**  
+- **Wallet Number:** 01010101010  
+- **MPIN:** 123456  
+- **One-Time Password:** 123456  
+
+For further details, refer to the [documentation](https://github.com/dev-KarimAhmed/paymob_payment_package).  
+
+### Contributions  
+
+We welcome contributions! If you encounter issues or have suggestions, feel free to open an issue on GitHub.  
