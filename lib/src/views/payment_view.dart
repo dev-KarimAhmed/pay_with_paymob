@@ -148,34 +148,34 @@ class PaymentViewState extends State<PaymentView> {
                     : paymentData.style?.unselectedColor ?? Colors.grey),
             const SizedBox(width: 10),
             Text(label, style: paymentData.style?.textStyle),
-            isVisa
-                ? const SizedBox()
-                : paymentData.style?.showMobileWalletIcons == true
-                    ? Row(
-                        children: [
-                          Image.asset(
-                            "assets/images/vodafone.png",
-                            height: 30,
-                            width: 40,
-                          ),
-                          Image.asset(
-                            "assets/images/etisalat.png",
-                            height: 30,
-                            width: 40,
-                          ),
-                          Image.asset(
-                            "assets/images/we.png",
-                            height: 30,
-                            width: 40,
-                          ),
-                          Image.asset(
-                            "assets/images/orange.png",
-                            height: 30,
-                            width: 30,
-                          ),
-                        ],
-                      )
-                    : const SizedBox(),
+            // isVisa
+            //     ? const SizedBox()
+            //     : paymentData.style?.showMobileWalletIcons == true
+            //         ? Row(
+            //             children: [
+            //               Image.asset(
+            //                 "assets/images/vodafone.png",
+            //                 height: 30,
+            //                 width: 40,
+            //               ),
+            //               Image.asset(
+            //                 "assets/images/etisalat.png",
+            //                 height: 30,
+            //                 width: 40,
+            //               ),
+            //               Image.asset(
+            //                 "assets/images/we.png",
+            //                 height: 30,
+            //                 width: 40,
+            //               ),
+            //               Image.asset(
+            //                 "assets/images/orange.png",
+            //                 height: 30,
+            //                 width: 30,
+            //               ),
+            //             ],
+            //           )
+            //         : const SizedBox(),
           ],
         ),
       ),

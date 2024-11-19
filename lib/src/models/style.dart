@@ -8,7 +8,7 @@ class Style {
       scaffoldColor , circleProgressColor;
   final TextStyle? textStyle;
   ButtonStyle? buttonStyle;
-  final bool? showMobileWalletIcons;
+  // final bool? showMobileWalletIcons;
 
   Style({
     this.circleProgressColor = Colors.blue,
@@ -19,7 +19,7 @@ class Style {
     this.scaffoldColor = Colors.white,
     this.textStyle,
     this.buttonStyle,
-    this.showMobileWalletIcons = true,
+    // this.showMobileWalletIcons = true,
   }){
      buttonStyle = buttonStyle ??
         ElevatedButton.styleFrom(

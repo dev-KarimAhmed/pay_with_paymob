@@ -5,6 +5,7 @@
 
 ## Features  
 
+<<<<<<< HEAD
 - Easy integration with Paymob's payment system.  
 - Support for multiple payment methods: Visa and mobile wallets.  
 - Customizable payment view with flexible style options.  
@@ -12,6 +13,11 @@
 - Callbacks for handling payment success and errors.  
 
 ---
+=======
+# pay_with_paymob
+
+A Flutter package that simplifies the integration of Paymob gateway for Visa and mobile wallet payments.
+>>>>>>> f590b71af9211ba066d7a7ebe79821eab643a677
 
 ## Getting Started  
 
@@ -26,12 +32,19 @@ Add the following line to your `pubspec.yaml` file:
 
 ```yaml  
 dependencies:  
-  pay_with_paymob: ^1.2.4
+  pay_with_paymob: ^1.3.4
 ```  
 
 Run `flutter pub get` to install the package.  
 
+<<<<<<< HEAD
 ---
+=======
+```yaml
+dependencies:
+ pay_with_paymob : ^1.1.2  
+```
+>>>>>>> f590b71af9211ba066d7a7ebe79821eab643a677
 
 ## Usage  
 
@@ -102,6 +115,7 @@ Navigator.push(
 - **Expiry Date:** 12/25  
 - **CVV:** 123  
 
+<<<<<<< HEAD
 **Mobile Wallet:**  
 - **Wallet Number:** 01010101010  
 - **MPIN:** 123456  
@@ -112,3 +126,6 @@ For further details, refer to the [documentation](https://github.com/dev-KarimAh
 ### Contributions  
 
 We welcome contributions! If you encounter issues or have suggestions, feel free to open an issue on GitHub.  
+=======
+تأكد من تحديث أي روابط أو معلومات تتعلق بالحزمة حسب الحاجة. إذا كان لديك أي تعديلات أو إضافات أخرى، لا تتردد في إخباري!
+>>>>>>> f590b71af9211ba066d7a7ebe79821eab643a677
